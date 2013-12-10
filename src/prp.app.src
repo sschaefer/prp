@@ -1,0 +1,15 @@
+{application, prp,
+ [
+  {description, "prp kata, 2nd"},
+  {vsn, "0.1.0"},
+  {modules, []},
+  {registered, [prp_sup]},
+  {applications, [
+                  kernel,
+                  stdlib,
+		  cowboy,
+		  mnesia
+                 ]},
+  {mod, { prp_app, []}},
+  {env, []}
+ ]}.

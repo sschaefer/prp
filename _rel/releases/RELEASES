@@ -1,0 +1,10 @@
+[{release,"prp","0.1.0","5.9.3.1",
+          [{kernel,"2.15.3","./lib/kernel-2.15.3"},
+           {stdlib,"1.18.3","./lib/stdlib-1.18.3"},
+           {ranch,"0.9.0","./lib/ranch-0.9.0"},
+           {cowlib,"0.4.0","./lib/cowlib-0.4.0"},
+           {crypto,"2.2","./lib/crypto-2.2"},
+           {mnesia,"4.7.1","./lib/mnesia-4.7.1"},
+           {cowboy,"0.9.0","./lib/cowboy-0.9.0"},
+           {prp,"0.1.0","./lib/prp-0.1.0"}],
+          permanent}].
