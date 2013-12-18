@@ -20,6 +20,10 @@ class TestPaperAPI(unittest.TestCase):
             self.assertEqual(resp.status_code, 200)
             self.assertEqual(resp.content, "<html><body>" + str(id) + "</body></html>")
 
+    def test_02_get_on_nonexisting_paper_returns_404(self):
+        resp = requests.get(self.paper_url + '12345')
+        self.assertEqual(resp.status_code, 404)
+
 if __name__ == "__main__":
     suite = unittest.TestLoader(verbosity=2).loadTestsFromTestCase(TestPaperAPI)
     unittest.TextTestRunner.run(suite)
