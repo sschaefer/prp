@@ -1,1 +1,0 @@
--record(paper, {id, title}).
