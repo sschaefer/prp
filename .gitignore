@@ -1,3 +1,7 @@
 *.beam
 _rel
 _rel/*
+*/#*
+*/.#*
+ebin
+*.pyc
