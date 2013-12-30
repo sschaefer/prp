@@ -69,7 +69,8 @@ put_accept_json(Req, State) ->
 		    ok = prp_schema:create_paper(Id, Title),
 		    Body = jsx:encode([{<<"id">>, Id}, {<<"title">>, Title}]),
 		    Req3 = cowboy_req:set_resp_body(Body, Req2),
-		    {{true, <<"/paper/", Id/binary>>}, Req3, State}
+		    Req4 = cowboy_req:set_resp_header(<<"location">>, <<"/paper/", Id/binary>>, Req3),
+		    {true, Req4, State}
 	    end;
 	{_, _, Req2} ->
 	    {ok, Req3} = cowboy_req:reply(400, Req2),
